@@ -1,7 +1,3 @@
-# Preparing a structured GitHub repository for a portfolio-worthy project
-
-# Create the README content
-readme_content = """
 # Books Dataset Analysis
 
 ## Project Overview
