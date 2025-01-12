@@ -30,7 +30,7 @@ This project explores a dataset of books, containing details such as titles, aut
    - Visualize trends in publication years and author popularity.
    - Investigate patterns and outliers.
 
-4. **Use Case (Optional)**:
+4. **Use Case**:
    - Prepare the dataset for machine learning or a recommendation system.
 
 ## Repository Structure
@@ -40,6 +40,9 @@ Books_Analysis_Portfolio/
     requirements.txt
     data/
         Books.csv
+        Ratings.csv
+        Users.csv
+        Merged_Books.csv
     notebooks/
         analysis.ipynb
     src/
