@@ -4,7 +4,7 @@ import pandas as pd
 
 from recommender_system import recommend_book
 
-app = Flask(__name__,template_folder='D:Portfolio Projects/Book Recommender System/src/templates')
+app = Flask(__name__,template_folder='D:/Portfolio Projects/Book Recommender System/src/templates')
 
 # Home route to show the input form
 @app.route("/")
