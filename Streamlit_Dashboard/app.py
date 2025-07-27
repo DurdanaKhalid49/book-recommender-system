@@ -1,14 +1,19 @@
 import streamlit as st
 import joblib
 import numpy as np
-
+import os
 # === Load model and pivot table ===
 book_pivot = joblib.load("Streamlit_Dashboard/model/book_pivot.pkl")
 model = joblib.load("Streamlit_Dashboard/model/book_knn_model.pkl")
 
 # === Page Config ===
 st.set_page_config(page_title="📚 Book Recommender", layout="centered")
-st.markdown("<style>" + open("style.css").read() + "</style>", unsafe_allow_html=True)
+if os.path.exists("style.css"):
+    with open("style.css") as f:
+        st.markdown("<style>" + f.read() + "</style>", unsafe_allow_html=True)
+else:
+    st.warning("⚠️ style.css not found. Default styling applied.")
+
 
 # === Title ===
 st.markdown("<h1 class='app-title'>📚 Book Recommender System</h1>", unsafe_allow_html=True)
