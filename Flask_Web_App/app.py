@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import joblib
 import numpy as np
-
+import os
 app = Flask(__name__)
 
 # Load model and data
@@ -34,6 +34,6 @@ def index():
                            selected_book=selected_book,
                            recommendations=recommendations,
                            n_recommendations=n_recommendations)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))  # use Railway port or default to 8080
+    app.run(host="0.0.0.0", port=port) 
