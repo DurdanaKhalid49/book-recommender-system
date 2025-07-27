@@ -8,8 +8,8 @@ model = joblib.load("Streamlit_Dashboard/model/book_knn_model.pkl")
 
 # === Page Config ===
 st.set_page_config(page_title="📚 Book Recommender", layout="centered")
-if os.path.exists("style.css"):
-    with open("style.css") as f:
+if os.path.exists("Streamlit_Dashboard/style.css"):
+    with open("Streamlit_Dashboard/style.css") as f:
         st.markdown("<style>" + f.read() + "</style>", unsafe_allow_html=True)
 else:
     st.warning("⚠️ style.css not found. Default styling applied.")
