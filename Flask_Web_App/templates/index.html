@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>📚 Book Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Book Recommender System</h1>
+        <p class="subtitle">Discover your next favorite read!</p>
+
+        <form method="POST">
+            <select name="book_name" required>
+                <option disabled selected>Select a book</option>
+                {% for book in book_list %}
+                    <option value="{{ book }}" {% if book == selected_book %}selected{% endif %}>{{ book }}</option>
+                {% endfor %}
+            </select>
+
+            <input type="number" name="n_recommendations" value="{{ n_recommendations }}" min="1" max="20" required>
+
+            <button type="submit">Get Recommendations</button>
+        </form>
+
+        {% if recommendations %}
+        <div class="results">
+            <h2>📖 Recommended Books:</h2>
+            <ul>
+                {% for rec in recommendations %}
+                    <li>{{ rec }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
