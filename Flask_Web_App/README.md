@@ -34,7 +34,7 @@ Welcome to the **Book Recommender System**, a sleek and stylish web app built us
 
 ## 📂 Project Structure
 ```bash
-Book_Recommender_System_Web_App/
+Flask_Web_App/
 │
 ├── model/
 │ ├── book_pivot.pkl # Pivot table of books vs users
