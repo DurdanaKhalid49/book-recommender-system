@@ -3,8 +3,8 @@ import joblib
 import numpy as np
 
 # === Load model and pivot table ===
-book_pivot = joblib.load("model/book_pivot.pkl")
-model = joblib.load("model/book_knn_model.pkl")
+book_pivot = joblib.load("Streamlit_Dashboard/model/book_pivot.pkl")
+model = joblib.load("Streamlit_Dashboard/model/book_knn_model.pkl")
 
 # === Page Config ===
 st.set_page_config(page_title="📚 Book Recommender", layout="centered")
